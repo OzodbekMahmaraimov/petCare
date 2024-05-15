@@ -1,0 +1,28 @@
+@use "../abstract/variables" as vars;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: vars.$background;
+  height: 1000px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.font-quicksand {
+  font-family: "Quicksand", sans-serif;
+}
+
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}

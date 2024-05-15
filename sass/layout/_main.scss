@@ -1,0 +1,10 @@
+.main {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__image {
+    width: 80%;
+    box-shadow: -5px -2px 45px 48px rgba(255,205,184,0.7);
+  }
+}
