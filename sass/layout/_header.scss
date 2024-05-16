@@ -1,9 +1,11 @@
 @use "../abstract/mixins";
+@use "../abstract/variables";
 
 .header {
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: variables.$background;
 
   .container {
     display: flex;
@@ -36,7 +38,7 @@
   }
 
   &-item {
-    color: #242851;
+    color: variables.$heading-color;
   }
 
   &-toggle {
@@ -74,6 +76,7 @@
     transform: translate(-50%, -50%);
     overflow: hidden;
     transition: all 0.2s ease-in-out;
+    background-color: variables.$background;
 
     &-list {
       flex-direction: column;

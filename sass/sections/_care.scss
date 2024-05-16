@@ -1,0 +1,84 @@
+@use "../abstract/variables" as vars;
+
+.care {
+  margin: 5rem 0;
+  background-color: #ffece4;
+  border-radius: 2rem;
+  padding: 4rem 2.5rem;
+
+  h5,
+  h2 {
+    text-align: center;
+  }
+
+  &__title {
+    padding-bottom: 1.4rem;
+  }
+
+  &__boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  &-box {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      .care-box__image {
+        transform: rotate(120deg);
+      }
+    }
+  }
+
+  &-box__title {
+    color: vars.$heading-color;
+    font-weight: 800;
+    font-size: 1.4rem;
+  }
+
+  &-box__image {
+    padding: 1.5rem;
+    width: 40%;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &-box__image_one {
+    background: linear-gradient(180deg, #b8deff 0%, #1d97ff 100%);
+  }
+
+  &-box__image_two {
+    background-color: white;
+  }
+
+  &-box__image_three {
+    background: linear-gradient(180deg, #ffe4aa 0%, #ff9c07 100%);
+    box-shadow: 0px 12px 25px 0px #faa82d4d;
+  }
+
+  &-box__image_four {
+    background: linear-gradient(180deg, #afe6eb 0%, #36becb 100%);
+    box-shadow: 0px 12px 25px 0px #faa82d4d;
+  }
+
+  &-box:nth-child(2) {
+    background: linear-gradient(180deg, #ffbba9 0%, #ff6236 100%);
+    box-shadow: 0px 15px 40px 0px #ff7a554d;
+
+    .care-box__title,
+    .care-box__description {
+      color: white;
+    }
+  }
+}

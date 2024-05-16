@@ -8,7 +8,6 @@
 
 body {
   background-color: vars.$background;
-  height: 1000px;
 }
 
 ul {
@@ -25,4 +24,20 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.subtitle {
+  color: vars.$subtitle-color;
+  font-size: 1rem;
+}
+
+.heading {
+  color: vars.$heading-color;
+  font-size: 3.2rem;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 28px;
+  font-weight: 400;
 }

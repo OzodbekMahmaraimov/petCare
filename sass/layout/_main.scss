@@ -1,10 +1,62 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
 .main {
-  margin-top: 5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  // background-color: red;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__title {
+    font-size: 4.5rem;
+    color: variables.$heading-color;
+  }
+
+  &__paragraph {
+    font-size: 1.2rem;
+    line-height: 34px;
+    font-weight: 400;
+  }
+
+  &__button:first-child {
+    @include mixins.button;
+    margin-right: 1rem;
+  }
+
+  &__button:last-child {
+    @include mixins.button(
+      $bg: linear-gradient(180deg, #c3e48f 0%, #8ec637 65%),
+      $shadow: 0px 10px 25px 0px #7db5234d
+    );
+  }
 
   &__image {
-    width: 80%;
-    box-shadow: -5px -2px 45px 48px rgba(255,205,184,0.7);
+    width: 44%;
+  }
+}
+
+@include mixins.media-md {
+  .main {
+    flex-direction: column;
+    margin-top: 5rem;
+
+    &__content {
+      gap: 1.5rem;
+    }
+
+    &__title {
+      font-size: 3.5rem;
+    }
+
+    &__image {
+      width: 70%;
+    }
   }
 }

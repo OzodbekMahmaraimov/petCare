@@ -1,4 +1,13 @@
+@use '../abstract/mixins';
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+
+@include mixins.media-md {
+  .container {
+    padding: 0 0.5rem;
+  }
 }
