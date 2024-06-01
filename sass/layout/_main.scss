@@ -42,21 +42,24 @@
   }
 }
 
-@include mixins.media-md {
+@include mixins.media-lg {
   .main {
     flex-direction: column;
     margin-top: 5rem;
+    padding: 0 1rem;
 
     &__content {
       gap: 1.5rem;
     }
 
-    &__title {
-      font-size: 3.5rem;
-    }
-
     &__image {
       width: 70%;
     }
+  }
+}
+
+@include mixins.media-md {
+  .main__title {
+    font-size: 3.5rem;
   }
 }
