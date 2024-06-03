@@ -1,0 +1,85 @@
+@use '../abstract/variables' as vars;
+@use '../abstract/mixins' as mixs;
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 5rem 0;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    } 
+
+    &__title {
+        font-size: 1.7rem;
+        color: vars.$heading-color;
+        font-weight: 800;
+    }
+
+    &__title span:first-child {
+        color: vars.$heading-color;
+    }
+
+    &__title span:last-child {
+        color: vars.$subtitle-color;
+    }
+
+    &__subscribe-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: white;
+        padding: 10px 20px;
+        border-radius: 3rem;
+        overflow: hidden;
+    }
+
+    &__subscribe-input {
+        border: none;
+        outline: none;
+        color: vars.$title-color;
+        font-size: 18px;
+    }
+
+    &__subscribe-button {
+        @include mixs.button;
+    }
+
+    &__description {
+        line-height: 2rem;
+    }
+
+    &__link-item {
+        padding: 0.5rem 0;
+    }
+
+    &__link {
+        color: vars.$title-color;
+    }
+
+    &__bottom {
+        text-align: center;
+        padding: 2rem 0;
+        color: vars.$title-color;
+    }
+}
+
+@include mixs.media-lg {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
+
+        &__column {
+            // margin: 0 auto;
+        }
+    }
+}
+
+@include mixs.media-md {
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

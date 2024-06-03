@@ -17,4 +17,43 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     console.log("Hello");
   });
+
+  // appointment
+  const appointmentBtn = document.querySelector("#appointment"),
+    meetData = document.querySelector("#meeting"),
+    submitData = document.querySelector("#submitData"),
+    modal = document.querySelector(".modal");
+
+  const closeModal = () => {
+    modal.classList.remove("flex");
+    modal.classList.add("hide");
+  };
+
+  appointmentBtn.addEventListener("click", () => {
+    modal.classList.remove("hide");
+    modal.classList.add("flex");
+  });
+
+  submitData.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (meetData.value === "") {
+      alert("Please enter a date for the meeting.");
+    } else if (new Date(meetData.value) - new Date() < 0) {
+      alert("Please write the future tense");
+    } else {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target == modal) {
+      closeModal();
+    }
+  });
 });

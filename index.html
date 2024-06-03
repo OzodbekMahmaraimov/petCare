@@ -30,11 +30,11 @@
         </div>
         <nav class="header__nav h-0">
           <ul class="header__nav-list">
-            <li class="header__nav-item"><a href="#">Start</a></li>
-            <li class="header__nav-item"><a href="#">Services</a></li>
-            <li class="header__nav-item"><a href="#">News</a></li>
-            <li class="header__nav-item"><a href="#">About</a></li>
-            <li class="header__nav-item"><a href="#">Contact</a></li>
+            <li class="header__nav-item"><a href="#">Home</a></li>
+            <li class="header__nav-item"><a href="#about">About</a></li>
+            <li class="header__nav-item"><a href="#service">Services</a></li>
+            <li class="header__nav-item"><a href="#team">Team</a></li>
+            <li class="header__nav-item"><a href="#price">Price</a></li>
             <li class="header__nav-toggle">
               <button class="header__button-item">384-129-293-39</button>
             </li>
@@ -62,8 +62,10 @@
           </p>
 
           <div class="main__buttons font-nunito">
-            <button class="main__button">Our Services</button>
-            <button class="main__button">Make Appointment</button>
+            <button class="main__button">
+              <a href="#service">Our Services</a>
+            </button>
+            <button id="appointment" class="main__button">Make Appointment</button>
           </div>
         </div>
         <img class="main__image" src="assets/main2.png" alt="pet image" />
@@ -72,6 +74,7 @@
     <!-- /Main section -->
 
     <!-- Care -->
+    <div id="about" class="links"></div>
     <div class="container">
       <section class="care">
         <h5 class="subtitle font-nunito">Care For Your Pet</h5>
@@ -127,6 +130,7 @@
     <!-- /Care -->
 
     <!-- Success Story -->
+    <div id="service" class="links"></div>
     <div class="container">
       <section class="story">
         <div class="story__content">
@@ -186,6 +190,7 @@
     <!-- /Success Story -->
 
     <!-- Team -->
+    <div id="team" class="links"></div>
     <div class="container">
       <section class="team">
         <h5 class="team__subtitle subtitle font-nunito">Our Team</h5>
@@ -241,58 +246,180 @@
     <!-- /Team -->
 
     <!-- Pricing plan -->
+    <div id="price" class="links"></div>
     <div class="container">
       <section class="pricing-table">
-          <div class="pricing-table__card">
-            <h2 class="pricing-table__card-title font-nunito">Regular Pack</h2>
-            <h3 class="pricing-table__card-duration font-nunito">3 Days</h3>
-            <ul class="pricing-table__card-features font-quicksand">
-              <li class="pricing-table__card-feature">Pet Shower</li>
-              <li class="pricing-table__card-feature">Fitness Checkup</li>
-              <li class="pricing-table__card-feature">Pet Grooming</li>
-              <li class="pricing-table__card-feature">Hair and Nail Cut</li>
-              <li class="pricing-table__card-feature">Control Hair Falling</li>
-            </ul>
-            <div class="pricing-table__card-price font-nunito"><span>$150</span> <span>Per Visit</span></div>
-            <div>
-              <button class="pricing-table__card-button">Purchase Pack</button>
-            </div>
+        <div class="pricing-table__card">
+          <h2 class="pricing-table__card-title font-nunito">Regular Pack</h2>
+          <h3 class="pricing-table__card-duration font-nunito">3 Days</h3>
+          <ul class="pricing-table__card-features font-quicksand">
+            <li class="pricing-table__card-feature">Pet Shower</li>
+            <li class="pricing-table__card-feature">Fitness Checkup</li>
+            <li class="pricing-table__card-feature">Pet Grooming</li>
+            <li class="pricing-table__card-feature">Hair and Nail Cut</li>
+            <li class="pricing-table__card-feature">Control Hair Falling</li>
+          </ul>
+          <div class="pricing-table__card-price font-nunito">
+            <span>$150</span> <span>Per Visit</span>
           </div>
-          <div class="pricing-table__card exclusive__card">
-            <h2 class="pricing-table__card-title exclusive__card-title font-nunito">Exclusive Pack</h2>
-            <h3 class="pricing-table__card-duration exclusive__card-duration font-nunito">10 Days</h3>
-            <ul class="pricing-table__card-features exclusive__card-features font-quicksand">
-              <li class="pricing-table__card-feature">Pet Shower</li>
-              <li class="pricing-table__card-feature">Fitness Checkup</li>
-              <li class="pricing-table__card-feature">Pet Grooming</li>
-              <li class="pricing-table__card-feature">Hair and Nail Cut</li>
-              <li class="pricing-table__card-feature">Control Hair Falling</li>
-              <li class="pricing-table__card-feature">Brush & Blow Dry</li>
-              <li class="pricing-table__card-feature">Pet Park And Games</li>
-            </ul>
-            <div class="pricing-table__card-price exclusive__card-price font-nunito"><span>$350</span> <span>Per Visit</span></div>
-            <div>
-              <button class="pricing-table__card-button exclusive__card-button">Purchase Pack</button>
-            </div>
+          <div>
+            <button class="pricing-table__card-button">Purchase Pack</button>
           </div>
-          <div class="pricing-table__card">
-            <h2 class="pricing-table__card-title font-nunito">Premium Pack</h2>
-            <h3 class="pricing-table__card-duration font-nunito">30 Days</h3>
-            <ul class="pricing-table__card-features font-quicksand">
-              <li class="pricing-table__card-feature">Pet Shower</li>
-              <li class="pricing-table__card-feature">Fitness Checkup</li>
-              <li class="pricing-table__card-feature">Pet Grooming</li>
-              <li class="pricing-table__card-feature">Hair and Nail Cut</li>
-              <li class="pricing-table__card-feature">Control Hair Falling</li>
-            </ul>
-            <div class="pricing-table__card-price font-nunito"><span>$550</span> <span>Per Visit</span></div>
-            <div>
-              <button class="pricing-table__card-button">Purchase Pack</button>
-            </div>
+        </div>
+        <div class="pricing-table__card exclusive__card">
+          <h2
+            class="pricing-table__card-title exclusive__card-title font-nunito"
+          >
+            Exclusive Pack
+          </h2>
+          <h3
+            class="pricing-table__card-duration exclusive__card-duration font-nunito"
+          >
+            10 Days
+          </h3>
+          <ul
+            class="pricing-table__card-features exclusive__card-features font-quicksand"
+          >
+            <li class="pricing-table__card-feature">Pet Shower</li>
+            <li class="pricing-table__card-feature">Fitness Checkup</li>
+            <li class="pricing-table__card-feature">Pet Grooming</li>
+            <li class="pricing-table__card-feature">Hair and Nail Cut</li>
+            <li class="pricing-table__card-feature">Control Hair Falling</li>
+            <li class="pricing-table__card-feature">Brush & Blow Dry</li>
+            <li class="pricing-table__card-feature">Pet Park And Games</li>
+          </ul>
+          <div
+            class="pricing-table__card-price exclusive__card-price font-nunito"
+          >
+            <span>$350</span> <span>Per Visit</span>
           </div>
+          <div>
+            <button class="pricing-table__card-button exclusive__card-button">
+              Purchase Pack
+            </button>
+          </div>
+        </div>
+        <div class="pricing-table__card">
+          <h2 class="pricing-table__card-title font-nunito">Premium Pack</h2>
+          <h3 class="pricing-table__card-duration font-nunito">30 Days</h3>
+          <ul class="pricing-table__card-features font-quicksand">
+            <li class="pricing-table__card-feature">Pet Shower</li>
+            <li class="pricing-table__card-feature">Fitness Checkup</li>
+            <li class="pricing-table__card-feature">Pet Grooming</li>
+            <li class="pricing-table__card-feature">Hair and Nail Cut</li>
+            <li class="pricing-table__card-feature">Control Hair Falling</li>
+          </ul>
+          <div class="pricing-table__card-price font-nunito">
+            <span>$550</span> <span>Per Visit</span>
+          </div>
+          <div>
+            <button class="pricing-table__card-button">Purchase Pack</button>
+          </div>
+        </div>
       </section>
     </div>
     <!-- /Pricing plan -->
+
+    <!-- Professional -->
+    <div class="container">
+      <section class="professional">
+        <div class="professional__content">
+          <h2 class="professional__title heading font-nunito">
+            Professional Pet Care
+          </h2>
+          <p class="professional__description paragraph font-quicksand">
+            Pet owners trust us to look after the needs of their beloved
+            companions. We are specialists committed to delivering the very
+            highest of veterinary care and affection.
+          </p>
+          <div class="professional__button-wrapper">
+            <button class="professional__button">
+              <a href="contact/contact.html">Contact Us Now</a>
+            </button>
+          </div>
+        </div>
+        <img
+          class="professional__image"
+          src="assets/professianal.png"
+          alt="dog"
+        />
+      </section>
+    </div>
+    <!-- /Professional -->
+
+    <!-- Footer -->
+    <div class="container">
+      <footer class="footer">
+        <div class="footer__column">
+          <h3 class="footer__title font-nunito">
+            <span>Vet</span><span>care</span>
+          </h3>
+          <p class="footer__description paragraph font-quicksand">
+            Quisque id leo non dolor tempor elementum quis ac urna. Nam
+            pharetra, ligula eget finibus dignissim, turpis ipsum sollicitudin.
+          </p>
+          <div class="footer__subscribe-box">
+            <input
+              class="footer__subscribe-input font-nunito"
+              type="email"
+              placeholder="Email address"
+            />
+            <button class="footer__subscribe-button font-quicksand">
+              Subscribe
+            </button>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title font-nunito">Address</h3>
+          <p class="footer__description font-quicksand paragraph">
+            +23 384 485 29<br />vet@shamim.com<br />123 king street, Melbrown
+            Victoria 3000, Australia
+          </p>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title font-nunito">Links</h3>
+          <ul class="footer__links font-quicksand">
+            <li class="footer__link-item">
+              <a class="footer__link" href="#about">About Us</a>
+            </li>
+            <li class="footer__link-item">
+              <a class="footer__link" href="#service">Services</a>
+            </li>
+            <li class="footer__link-item">
+              <a class="footer__link" href="contact/contact.html">Contact Us</a>
+            </li>
+            <li class="footer__link-item">
+              <a class="footer__link" href="contact/privay.html">Privacy Policy</a>
+            </li>
+            <li class="footer__link-item">
+              <a class="footer__link" href="#team">Teams</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title font-nunito">Opening Hours</h3>
+          <p class="footer__description font-quicksand">
+            Monday-Tuesday 09:00-18:00<br />Wednesday 09:00-18:00<br />Thursday-Friday
+            09:00-18:00<br />Saturday 10:00-17:00<br />Sunday 10:30-16:00
+          </p>
+        </div>
+      </footer>
+      <div class="footer__bottom font-quicksand">
+        &copy; Copyright 2021 - 2024 | Pet Theme by Md Shamim Hossain | All
+        Rights Reserved
+      </div>
+    </div>
+
+    <!-- /Footer -->
+
+    <!-- Modal -->
+    <section class="modal hide">
+      <form id="submitData" class="modal-wrapper">
+        <input class="modal-metting" id="meeting" type="date" />
+        <div><button type="submit" class="modal-submit_button">Submit</button></div>
+      </form>
+    </section>
+    <!-- /Modal -->
 
     <script src="js/script.js"></script>
   </body>

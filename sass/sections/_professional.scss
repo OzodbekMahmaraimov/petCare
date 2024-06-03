@@ -1,0 +1,48 @@
+@use '../abstract/mixins' as mixs;
+
+.professional {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 500px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: #FFECE4;
+    padding: 0 2rem;
+    margin: 5rem 0;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__title {
+        color: black;
+    }
+    
+    &__button {
+        @include mixs.button
+    }
+
+    &__image {
+        width: 25rem;
+        margin: auto auto;
+    }
+}
+
+@include mixs.media-lg {
+    .professional {
+        grid-template-columns: repeat(1, 1fr);
+
+        &__image {
+            width: 80%;
+        }
+    }
+}
+
+@include mixs.media-md {
+    .professional__image {
+        width: 100%;
+    }
+}

@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -40,4 +41,16 @@ a {
   font-size: 1rem;
   line-height: 28px;
   font-weight: 400;
+}
+
+button a {
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.flex {
+  display: flex;
 }
