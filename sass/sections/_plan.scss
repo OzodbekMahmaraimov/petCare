@@ -1,0 +1,112 @@
+@use "../abstract/mixins" as mixs;
+@use "../abstract/variables" as vars;
+
+.pricing-table {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 5rem 0;
+
+  &__card {
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.8rem 5.5rem;
+    border-radius: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.4s ease-out;
+
+    &:hover {
+      transform: translate3d(1ch, 0.1in, 2em);
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: vars.$heading-color;
+    }
+
+    &-duration {
+      font-size: 2.7rem;
+      font-weight: 700;
+      color: vars.$heading-color;
+    }
+
+    &-feature {
+      padding: 0.7rem 0;
+    }
+
+    &-features {
+      color: vars.$title-color;
+    }
+
+    &-price {
+      color: vars.$subtitle-color;
+    }
+
+    &-price span:first-child {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    &-price span:last-child {
+      font-weight: 700;
+    }
+
+    &-button {
+      @include mixs.button;
+    }
+  }
+
+  &__card:nth-child(1),
+  &__card:nth-child(3) {
+    background-color: white;
+    box-shadow: 0px 15px 40px 0px #d9c8c14d;
+  }
+}
+
+.exclusive__card {
+  box-shadow: 0px 15px 40px 0px #ff673d4d;
+  background: linear-gradient(180deg, #ffa389 0%, #ff6439 100%);
+
+  &-title,
+  &-duration,
+  &-features,
+  &-price {
+    color: white;
+  }
+
+  &-button {
+    margin-top: 1rem;
+    @include mixs.button(#ffffff, 0px 10px 25px 0px #ff7c544d, #ff7751);
+  }
+}
+
+@include mixs.media-lg {
+  .pricing-table {
+    gap: 1.2rem;
+  }
+}
+
+@include mixs.media-sm {
+  .pricing-table {
+    &__card {
+      padding: 2.8rem 0;
+      width: 100%;
+
+      &-title {
+        font-size: 1.2rem;
+      }
+
+      &-duration {
+        font-size: 2.3rem;
+      }
+
+      &-price span:first-child {
+        font-size: 2.1rem;
+      }
+    }
+  }
+}

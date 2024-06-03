@@ -1,0 +1,104 @@
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins" as mixs;
+
+.team {
+  background-color: #ffece4;
+  padding: 4rem 2rem;
+  border-radius: 2rem;
+  margin: 5rem 0;
+
+  &__heading,
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__members {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  &__member {
+    background-color: white;
+    text-align: center;
+    padding: 2rem 2rem;
+    border-radius: 45%;
+  }
+
+  &__member-one {
+    background-color: #fad486;
+  }
+
+  &__member-two {
+    background-color: #AEA9EE;
+  }
+
+  &__member-three {
+    background-color: #FFC5A2;
+  }
+
+  &__member-four {
+    background-color: #C2E6F8;
+  }
+
+  &__member-image-container {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  &__member-image {
+    padding: 1rem 0;
+    width: 90%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__member-name {
+    padding-top: 1.5rem;
+    color: vars.$heading-color;
+  }
+
+  &__member-title {
+    color: vars.$subtitle-color;
+  }
+}
+
+@include mixs.media-lg {
+  .team {
+    &__members {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__member {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@include mixs.media-md {
+    .team {
+        &__members {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__member {
+            width: 20rem;
+        }
+    }
+}
+
+@include mixs.media-sm {
+    .team__member {
+        width: 100%;
+    }
+}

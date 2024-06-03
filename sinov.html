@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff3e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .pricing-table {
+            display: flex;
+            gap: 20px;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+        }
+        .pricing-card.exclusive {
+            background: #ff6f61;
+            color: white;
+        }
+        .pricing-card h2 {
+            margin: 0 0 10px;
+        }
+        .pricing-card h3 {
+            margin: 0 0 20px;
+            font-size: 24px;
+        }
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        .pricing-card ul li {
+            margin: 10px 0;
+        }
+        .pricing-card .price {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .pricing-card button {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .pricing-card.exclusive button {
+            background: white;
+            color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-table">
+        <div class="pricing-card">
+            <h2>Regular Pack</h2>
+            <h3>3 Days</h3>
+            <ul>
+                <li>Pet Shower</li>
+                <li>Fitness Checkup</li>
+                <li>Pet Grooming</li>
+                <li>Hair and Nail Cut</li>
+                <li>Control Hair Falling</li>
+            </ul>
+            <div class="price">$150 Per Visit</div>
+            <button>Purchase Pack</button>
+        </div>
+        <div class="pricing-card exclusive">
+            <h2>Exclusive Pack</h2>
+            <h3>10 Days</h3>
+            <ul>
+                <li>Pet Shower</li>
+                <li>Fitness Checkup</li>
+                <li>Pet Grooming</li>
+                <li>Hair and Nail Cut</li>
+                <li>Control Hair Falling</li>
+                <li>Brush & Blow Dry</li>
+                <li>Pet Park And Games</li>
+            </ul>
+            <div class="price">$350 Per Visit</div>
+            <button>Purchase Pack</button>
+        </div>
+        <div class="pricing-card">
+            <h2>Premium Pack</h2>
+            <h3>30 Days</h3>
+            <ul>
+                <li>Pet Shower</li>
+                <li>Fitness Checkup</li>
+                <li>Pet Grooming</li>
+                <li>Hair and Nail Cut</li>
+                <li>Control Hair Falling</li>
+            </ul>
+            <div class="price">$550 Per Visit</div>
+            <button>Purchase Pack</button>
+        </div>
+    </div>
+</body>
+</html>
