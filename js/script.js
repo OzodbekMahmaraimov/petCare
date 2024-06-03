@@ -1,4 +1,14 @@
 window.addEventListener("DOMContentLoaded", () => {
+  // Loader
+  const loader = document.querySelector('.loading')
+
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    setTimeout(() => {
+      loader.style.display = "none"
+    }, 500);
+  }, 2000);
+
   // Nav action
   const navToggle = document.querySelector(".nav-toggle");
   const headerNav = document.querySelector(".header__nav");
